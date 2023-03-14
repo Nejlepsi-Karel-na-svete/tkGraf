@@ -77,6 +77,9 @@ class Application(tk.Tk):
                 x = line.split(';')
                 line = f.readline()
                 y = line.split(';')
+                x= [ float(i.replace(',','.')) for i in x ]
+                y= [ float(i.replace(',','.')) for i in y ]
+        print(x)
         pl.plot(x, y)
         pl.show()
                 
